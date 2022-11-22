@@ -1,0 +1,34 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.users{
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.usersData{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.userData{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.icon{
+  width: 20px;
+  height: 20px;
+}
+.reductData{
+  display: flex;
+  gap: 20px;
+}
+.bidUserIcon{
+  width: 500px;
+  height: 500px;
+}
