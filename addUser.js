@@ -5,6 +5,7 @@ import back from './back.svg'
 export default function AddUserForm(){
   const [first_name, setFirst_name] = useState('')
   const [email, setEmail] = useState('')
+  const [avatar, setAvatar] = useState('')
 
   function createUser(e) {
     e.preventDefault()
@@ -14,10 +15,12 @@ export default function AddUserForm(){
       body: JSON.stringify({
         first_name,
         email,
+        avatar,
       })
     })
     .then(res => res.json())
     .then(console.log)
+    .then(alert('User create!'))
     .then(window.location.assign('/'))
   }
 
@@ -29,7 +32,9 @@ export default function AddUserForm(){
           <input type='text' id="nameInput" onChange={(e)=> setFirst_name(e.target.value)}/>
         <label htmlFor="emailInput">E-mail: </label>
           <input type='email' id='emailInput' onChange={(e)=> setEmail(e.target.value)}/>
-          <input type="submit" value='add'/>
+        {/* <label htmlFor="avatarInput">Avatar: </label>
+          <input type='image' id='avatarInput' onChange={(e)=> setAvatar(e.target.value)} /> */}
+        <input type="submit" value='add'/>
       </form>
       <Link to='/'><img src={back} alt='back'/></Link>
     </>

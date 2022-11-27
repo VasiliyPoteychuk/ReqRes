@@ -7,7 +7,7 @@ import back from './back.svg'
 
 export default function User(){
 
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState({})
   const {id} = useParams()
 
   useEffect(()=>{

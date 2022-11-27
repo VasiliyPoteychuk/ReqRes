@@ -31,6 +31,7 @@ export default function UpdateUser(){
     })
     .then(res => res.json())
     .then(console.log)
+    .then(alert('User change!'))
     .then(window.location.assign('/'))
   }
   return(
